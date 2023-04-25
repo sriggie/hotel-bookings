@@ -47,6 +47,7 @@ $conn->close();
     <link rel="stylesheet" href="book.css">
   </head>
   <body>
+  <script type="text/javascript" src="index.js"></script>
     <div class="welcome-message">
       <h1>Book now to get your prefered room reserved by us</h1>
       <p>Book your next stay with us and enjoy top-notch amenities, stunning views, and exceptional service.</p>

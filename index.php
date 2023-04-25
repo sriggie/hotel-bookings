@@ -20,18 +20,18 @@ $sql = "SELECT client_id, client_name, no_of_rooms, email FROM bookings";
 $result = $conn->query($sql);
 
 // Check if any rows were returned
-if ($result->num_rows > 0) {
-    // Output data of each row
-    while($row = $result->fetch_assoc()) {
-        echo "Client ID: " . $row["client_id"]. "<br>";
-        echo "Client Name: " . $row["client_name"]. "<br>";
-        echo "No. of Rooms: " . $row["no_of_rooms"]. "<br>";
-        echo "Email: " . $row["email"]. "<br>";
-        echo "<br>";
-    }
-} else {
-    echo "0 results";
-}
+// if ($result->num_rows > 0) {
+//     // Output data of each row
+//     while($row = $result->fetch_assoc()) {
+//         echo "Client ID: " . $row["client_id"]. "<br>";
+//         echo "Client Name: " . $row["client_name"]. "<br>";
+//         echo "No. of Rooms: " . $row["no_of_rooms"]. "<br>";
+//         echo "Email: " . $row["email"]. "<br>";
+//         echo "<br>";
+//     }
+// } else {
+//     echo "0 results";
+// }
 
 // Close database connection
 $conn->close();
@@ -557,6 +557,6 @@ $conn->close();
 </section>
 
 <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
-    <script src="index.js"></script>
+<script type="text/javascript" src="index.js"></script>
 </body>
 </html>
