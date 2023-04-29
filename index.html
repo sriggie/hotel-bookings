@@ -1,50 +1,3 @@
-<?php  
-// Database credentials
-$username = "root";
-$hostname = "localhost";
-$password = "";
-$dbName = "hotel-booking";
-
-// connect to the database
-$conn = mysqli_connect($hostname, $username, $password, $dbName );
-
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-
-// SQL query to select data from table
-$sql = "SELECT client_id, client_name, no_of_rooms, email FROM bookings";
-
-// Execute query and get results
-$result = $conn->query($sql);
-
-// Check if any rows were returned
-// if ($result->num_rows > 0) {
-//     // Output data of each row
-//     while($row = $result->fetch_assoc()) {
-//         echo "Client ID: " . $row["client_id"]. "<br>";
-//         echo "Client Name: " . $row["client_name"]. "<br>";
-//         echo "No. of Rooms: " . $row["no_of_rooms"]. "<br>";
-//         echo "Email: " . $row["email"]. "<br>";
-//         echo "<br>";
-//     }
-// } else {
-//     echo "0 results";
-// }
-
-// Close database connection
-$conn->close();
-
-
-?>
-
-
-
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -71,29 +24,28 @@ $conn->close();
             <a href="#book"><i class="fas fa-book"></i> book with us</a>
         </nav>
         
-        <!-- <div class="icons">
+        <div class="icons">
             <i class="fas fa-search" id="search-btn"></i>
             <i class="fas fa-user" id="login-btn"></i>
-        </div> -->
-
+        </div>
         <form action="" class="search-bar-container">
             <input type="search" id="search-bar" placeholder="search here...">
             <label for="search-bar" class="fas fa-search"></label>
         </form>
     </header>
-<!-- <div class="login-form-container">
+<div class="login-form-container">
     <i class="fas fa-times" id="form-close"></i>
     <form action="">
          <h3>login</h3>
-         <input type="email" class="box" placeholder="enter your email">
+         <input type="email" class="box" placeholder="enter your username">
          <input type="password" class="box" placeholder="enter your email">
-         <input type="submit" value="login now" class="btn">
+         <input type="submit" value="login now"class="btn">
          <input type="checkbox" id="remember">
          <label for="remember">Remember me</label>
-         <p>forgrt password? <a href="#">click here</a></p>
-         <p>don't have and account? <a href="#">register now</a></p>
+         <p>forgrt password? <a href="recovery.php">click here</a></p>
+         <p>don't have and account? <a href="create_customer.php">create new account</a></p>
     </form>
-</div> -->
+</div>
 <section class="home" id="home">
     <div class="content">
         <h3>we Offer The Best Holiday Picked From Our Beutiful Motehrland</h3>
@@ -387,7 +339,6 @@ $conn->close();
                         </div>
                 </div>
             </div>
-
             <div class="swiper-slide">
                 <div class="box">
                     <img src="images/rev.jpg" alt="lil">
@@ -402,7 +353,6 @@ $conn->close();
                         </div>
                 </div>
             </div>
-
             <div class="swiper-slide">
                 <div class="box">
                     <img src="images/gazzel.jpg" alt="">
@@ -417,7 +367,6 @@ $conn->close();
                         </div>
                 </div>
             </div>
-
             <div class="swiper-slide">
                 <div class="box">
                     <img src="images/revv.jpeg" alt="">
@@ -435,9 +384,6 @@ $conn->close();
         </div>
     </div>
 </section>
-
-
-
 <section class="contact" id="contact">
     <h1 class="heading">
         <span>c</span>
@@ -487,7 +433,7 @@ $conn->close();
         <span>o</span>
         <span>o</span>
         <span>k</span>
-        <span class="space"></span>
+        <span class="space">_</span>
         <span>n</span>
         <span>o</span>
         <span>w</span>
