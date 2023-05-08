@@ -21,6 +21,9 @@
     box-sizing: border-box;
   }
 
+
+  {
+  }
   .form-container input[type=submit] {
     background-color: #4CAF50;
     color: white;
